@@ -29,19 +29,19 @@ const reviewSchema = new schema({
 });
 
 const movieSchema = new schema({
-            name:{
-                   type:"string",
+            name: {
+                   type: String,
                    required: [true, "Must be string and is required"],
                    
                },
-            year:{
-                   type:"number",
+            year: {
+                   type: Number,
                    minimum: 1900,
                    maximum: 3000,
                    required: [true, "must be an integer in [1900, 3000] and is required"]
                },
-            ageRestriction:{
-                   type:"string",
+            ageRestriction: {
+                   type: String,
                    required: [true, "minimum age required to watch this movie"]
                },
                actors:[actorSchema],
@@ -49,4 +49,4 @@ const movieSchema = new schema({
 
 });
        
-module.exports = mongoose.model("Movie",movieSchema);
+module.exports = mongoose.model("movie",movieSchema);
